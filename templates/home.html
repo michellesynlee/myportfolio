@@ -5,7 +5,7 @@
 <div class="intro">
     <img src="{{ url_for('static', filename='headshot.jpg') }}" alt="Headshot" class="headshot">
     <div class="intro-text">
-        <h1> Hi, my name is Michelle Lee. Welcome to my portfolio! </h1>
+        <h1 style="font-size: 2rem;"> Hi, my name is Michelle Lee. Welcome to my portfolio! </h1>
         <p>I'm currently a rising senior at Columbia University majoring in Computer Science. 
             I love building projects (such as this website!) and learning more about AI and UX design. 
             In my free time I like to read, learn art/photography, and pole vault!</p>
@@ -13,7 +13,9 @@
         <div class="headshot-links">
             <a href="https://github.com/michellesynlee" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/michellesynlee" target="_blank">LinkedIn</a> 
-            <a href="{{ url_for('contact') }}">Contact Me</a>
+            <!--<a href="{{ url_for('contact') }}">Contact Me</a>-->
+            <a href="https://drive.google.com/file/d/1PQwQV8QSCDZRk5DdK_u_hGS22DQUrIMO/view?usp=sharing" target="_blank">CV</a>
+
         </div>
     </div>
 </div>
@@ -22,7 +24,8 @@
 
 <div class="projects-section">
     <div class="section-header">
-        <h2>Current Projects</h2>
+        <h2 style="font-size: 3rem;">Current Projects</h2>
+        <p> (Check out my completed projects in the projects page linked above!) </p>
     </div>
     <div class="project-gallery">
         <div class="project">
@@ -30,8 +33,8 @@
             <p class="caption">Soccer-themed pingpong app using Electron.</p>
         </div>
         <div class="project">
-            <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Second Project">
-            <p class="caption"><strong>Another Project</strong><br>Brief description of the second project</p>
+            <img src="{{ url_for('static', filename='timer.png') }}" alt="Second Project">
+            <p class="caption">Timer app with multiple options: basic, study plant, pomodoro</p>
         </div>
     </div>
 </div>
