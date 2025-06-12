@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder='.')  # Use '.' to point to the current folder
+app = Flask(__name__, template_folder='templates')  # Use '.' to point to the current folder
 
 @app.route('/')
 def home():
