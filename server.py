@@ -1,10 +1,10 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')  # Use '.' to point to the current folder
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/projects')
 def projects():
