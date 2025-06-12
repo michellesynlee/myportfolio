@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Photography{% endblock %}
+{% block content %}
+
+<p style="text-align: center;">
+    Welcome! These were all taken by me on the Nikon N90s with 35mm film.
+  </p>
+
+<div class="photo-gallery">
+    {% for i in range(1, 11) %}
+        <a href="{{ url_for('static', filename='photos/' ~ i ~ ('.JPG' if i in [3, 4] else '.jpg')) }}" target="_blank">
+            <img src="{{ url_for('static', filename='photos/' ~ i ~ ('.JPG' if i in [3, 4] else '.jpg')) }}" alt="Photo {{ i }}">
+        </a>
+    {% endfor %}
+</div>
+
+{% endblock %}

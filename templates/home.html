@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Home: My Portfolio{% endblock %}
+{% block content %}
+
+<div class="intro">
+    <img src="{{ url_for('static', filename='headshot.jpg') }}" alt="Headshot" class="headshot">
+    <div class="intro-text">
+        <h1> Hi, my name is Michelle Lee. Welcome to my portfolio! </h1>
+        <p>I'm currently a rising senior at Columbia University majoring in Computer Science. 
+            I love building projects (such as this website!) and learning more about AI and UX design. 
+            In my free time I like to read, learn art/photography, and pole vault!</p>
+        <p>Feel free to check out my page and/or contact me!</p>
+        <div class="headshot-links">
+            <a href="https://github.com/michellesynlee" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/michellesynlee" target="_blank">LinkedIn</a> 
+            <a href="{{ url_for('contact') }}">Contact Me</a>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="projects-section">
+    <div class="section-header">
+        <h2>Current Projects</h2>
+    </div>
+    <div class="project-gallery">
+        <div class="project">
+            <img src="{{ url_for('static', filename='pingpong.png') }}" alt="picpong pic">
+            <p class="caption">Soccer-themed pingpong app using Electron.</p>
+        </div>
+        <div class="project">
+            <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Second Project">
+            <p class="caption"><strong>Another Project</strong><br>Brief description of the second project</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
