@@ -1,6 +1,34 @@
 {% extends "base.html" %}
 {% block title %}Projects{% endblock %}
 {% block content %}
-<h2>Projects</h2>
-<div id="project-list"></div>
+<div class="completed-projects-section">
+    <h2 style="text-align: center;">My Completed Projects</h2>
+    <div class="project-gallery">
+        <div class="project">
+            <img src="{{ url_for('static', filename='llmmaze.png') }}" alt="llm project">
+            <p class="caption">
+                3DUI & AR Group Project: Using voice commands and LLMs in Oculus Quest 2 headset to support navigating from start to exit in a VR maze in Unity</p>
+                <a href="https://docs.google.com/presentation/d/1bCrMDPvRn_Z1CsftvZMcsmSgtWHIZ2YxB4b-kjzt_BE/edit?usp=sharing" target="_blank">Click to see final project/demo</a> <br>
+        </div>
+        <div class="project">
+            <img src="{{ url_for('static', filename='maze.png') }}" alt="maze project">
+            <p class="caption">
+                3DUI & AR Individual Project: Used Unity to build a mobile tilt-based ball-rolling game with levels, collectibles, victory screens, etc.</p>
+            <a href="https://www.youtube.com/shorts/qQVhkKSQeQs" target="_blank">Click to watch demo</a> <br>
+        </div>
+        <div class="project">
+            <img src="{{ url_for('static', filename='guitar.png') }}" alt="guitar project">
+            <p class="caption">
+                UI Design Group Project: Website built using HTML/CSS/JS to teach beginners basic guitar chords.</p>
+            <a href="https://www.youtube.com/watch?v=EXRxySnOA3o" target="_blank">Click to watch demo</a> <br>
+        </div>
+        <div class="project">
+            <img src="{{ url_for('static', filename='packing.png') }}" alt="guitar project">
+            <p class="caption">
+                Personal Project: Used Electron to make an app that keeps track of packing list items. Saves data into a txt file so that info is not lost.</p>
+            <a href="https://www.youtube.com/watch?v=5bTPun9yc6g" target="_blank">Click to watch demo</a> <br>
+        </div>
+        <!-- Add more projects as needed  -->
+    </div>
+</div>
 {% endblock %}
