@@ -8,10 +8,9 @@
 
 <div class="photo-gallery">
     {% for i in range(1, 11) %}
-        <a href="{{ url_for('static', filename='photos/' ~ i ~ ('.JPG' if i in 3 else '.jpg')) }}" target="_blank">
-            <img src="{{ url_for('static', filename='photos/' ~ i ~ ('.JPG' if i in 3 else '.jpg')) }}" alt="Photo {{ i }}">
+        <a href="{{ url_for('static', filename='photos/' ~ i ~ ('.JPG' if i == 3 else '.jpg')) }}" target="_blank">
+            <img src="{{ url_for('static', filename='photos/' ~ i ~ ('.JPG' if i == 3 else '.jpg')) }}" alt="Photo {{ i }}">
         </a>
     {% endfor %}
 </div>
-
 {% endblock %}
