@@ -111,10 +111,14 @@ hr {
 }
 
 .project img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;  /* whole image fits inside, with blank bars */
-  background: #f0f0f0;  /* optional “bars” color */
+  /* undo forced ratio/cropping */
+  aspect-ratio: auto;  
+  object-fit: cover;       /* or contain, if you’d rather letter‑box than crop */
+  
+  /* preserve natural ratio but cap the dimensions */
+  width: 100%;             /* fill its parent’s width */
+  height: auto;            /* keep aspect ratio */
+  max-height: 180px;       /* or whatever “small” max you want */
 }
 
 .caption {
