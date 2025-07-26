@@ -111,11 +111,10 @@ hr {
 }
 
 .project img {
-    width: 100%;
-    aspect-ratio: 4 / 3; /* or whatever matches your left image */
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: 4px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;  /* whole image fits inside, with blank bars */
+  background: #f0f0f0;  /* optional “bars” color */
 }
 
 .caption {
