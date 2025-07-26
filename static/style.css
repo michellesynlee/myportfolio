@@ -118,7 +118,7 @@ hr {
   /* preserve natural ratio but cap the dimensions */
   width: 100%;             /* fill its parent’s width */
   height: auto;            /* keep aspect ratio */
-  max-height: 180px;       /* or whatever “small” max you want */
+  max-height: 300px;       /* or whatever “small” max you want */
 }
 
 .caption {
