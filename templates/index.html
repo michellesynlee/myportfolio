@@ -26,19 +26,13 @@
 <div class="projects-section">
     <div class="section-header">
         <h2 style="font-size: 3rem;">Current Projects</h2>
-        <p> (Check out my completed projects in the projects page linked above!) </p>
+        <p>(Check out my completed projects in the projects page linked above!)</p>
     </div>
-    <div class="project-gallery">
-        <div class="project">
-            <img src="{{ url_for('static', filename='pingpong.png') }}" alt="pingpong pic">
-            <p class="caption">Fun side project: a soccer-themed game using Electron.</p>
-        </div>
-        <div class="project">
-            <img src="{{ url_for('static', filename='UROP_website.png') }}" alt="Second Project">
-            <p class="caption">Currently working on a developing and iterating on a website 
-                for Columbia Irving Medical Center's Dr. Hiral Shah and Divya Palanisamy. The website serves as a medical/event resource hub and 
-                place of community for church members in Harlem and Washington Heights.</p>
-        </div>
+    <div class="project-single" style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+        <img src="{{ url_for('static', filename='UROP_website.png') }}" alt="UROP Website Project" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px;">
+        <p class="caption" style="max-width: 500px; font-size: 1.1rem;">
+            Currently working on developing and iterating on a website for Columbia Irving Medical Center's Dr. Hiral Shah and Divya Palanisamy. The website serves as a medical/event resource hub and place of community for church members in Harlem and Washington Heights.
+        </p>
     </div>
 </div>
 
