@@ -55,22 +55,23 @@
 
   <!-- Second project: image -->
   <div class="project-single" 
-       style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
-       
+     style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
+     
     <div style="position: relative; width: 100%; max-width: 400px;">
-      <img 
-        src="static/pixplot.png" 
+        <img 
+        src="{{ url_for('static', filename='pixplot.png') }}" 
         alt="Screenshot of UMAP"
         style="width: 100%; border-radius: 8px; object-fit: cover;">
     </div>
 
     <p class="caption" style="max-width: 500px; font-size: 1.1rem;">
-      My second project is a <strong>UMAP visualization of images from the Elder's Project </strong> using PixPlot for
-      my work study Digital Humanities position at Incite Institute. I use Python to organize/prepare the images and
-      the corresponding metadata, and am currently working on (1) adding more customizations to the visualization and
-      (2) figuring out how to display this information in an interesting and interactive manner.
+        My second project is a <strong>UMAP visualization of images from the Elder's Project</strong> using PixPlot for
+        my work study Digital Humanities position at Incite Institute. I use Python to organize and prepare the images
+        and metadata, and am currently working on (1) adding customizations to the visualization and (2) exploring
+        interactive ways to display this information.
     </p>
-  </div>
+    </div>
+
 </div>
 
 {% endblock %}
