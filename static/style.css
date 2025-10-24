@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    /*font-family: 'Baloo 2', cursive;*/
     font-family: 'Quicksand', sans-serif;
     background-color: #ffffff;
 }
 
+/* ---------- NAVIGATION ---------- */
 nav {
-    background-color: #555783;
+    background-color: #aa325a;
     padding: 1rem;
 }
 
@@ -18,6 +18,7 @@ nav ul {
     justify-content: space-around;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -31,6 +32,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* ---------- GENERAL SECTIONS ---------- */
 section {
     padding: 2rem;
 }
@@ -55,10 +57,17 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* ---------- INTRO SECTION ---------- */
+
 .intro {
     display: flex;
     align-items: center;
+    justify-content: center;  /* centers both image + text horizontally */
     gap: 3rem;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    text-align: center;  /* ensures even alignment when stacked */
+    font-size: 1.2rem;
 }
 
 .intro-left {
@@ -68,31 +77,90 @@ button:hover {
 }
 
 .intro-text {
-    max-width: 950px;
+    max-width: 1300px;   /* make text stretch wider */
+    flex: 1;
+    text-align: left;     /* keep text aligned left on large screens */
+}
+
+/* narrow screens */
+@media (max-width: 800px) {
+  .intro {
+      flex-direction: column-reverse; /* image ABOVE text */
+      text-align: center;
+      gap: 1.5rem;
+  }
+
+  .intro-text {
+      max-width: 90%;
+      text-align: center; /* center text when stacked */
+      padding: 0 1rem;
+  }
+
+  .headshot {
+      width: 130px;
+      height: 130px;
+  }
 }
 
 .headshot {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 60%;
-    border: 2px solid #ccc;
+    border-radius: 70%;
+    border: 2px solid #e1aaca79;
 }
 
-.headshot-links { 
+.headshot-links {
     display: flex;
     gap: 1.5rem;
 }
 
 hr {
-    border: none;             
-    height: 1px;              
-    background-color: #7e7e7f53;   
-    margin: 3rem 0;           
-    width: 95%;               
+    border: none;
+    height: 1px;
+    background-color: #7e7e7f53;
+    margin: 3rem 0;
+    width: 95%;
 }
 
-/*current projects secion*/ 
+.headshot-links a {
+  color: #7e1b3c; /* your site’s purple-gray tone */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.headshot-links a:hover {
+  color: #dc4376; /* slightly lighter */
+  text-decoration: underline;
+}
+
+.contact-link {
+  color: #7e1b3c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #dc4376;
+  text-decoration: underline;
+}
+
+.insta-link,
+.insta-link:visited {
+  color: #7e1b3c;             
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.insta-link:hover {
+  color: #dc4376;            
+  text-decoration: underline;
+}
+
+/* ---------- PROJECTS ---------- */
 .section-header {
     text-align: center;
     margin-bottom: 1rem;
@@ -111,14 +179,11 @@ hr {
 }
 
 .project img {
-  /* undo forced ratio/cropping */
-  aspect-ratio: auto;  
-  object-fit: cover;       /* or contain, if you’d rather letter‑box than crop */
-  
-  /* preserve natural ratio but cap the dimensions */
-  width: 100%;             /* fill its parent’s width */
-  height: auto;            /* keep aspect ratio */
-  max-height: 400px;       /* or whatever “small” max you want */
+    aspect-ratio: auto;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
 }
 
 .caption {
@@ -127,7 +192,7 @@ hr {
     color: #333;
 }
 
-/*photography page*/
+/* ---------- PHOTOGRAPHY PAGE ---------- */
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -148,7 +213,8 @@ hr {
 .photo-gallery img:hover {
     transform: scale(1.02);
 }
-/* contact page container */
+
+/* ---------- CONTACT PAGE ---------- */
 .contact-container {
     max-width: 700px;
     margin: 2rem auto;
@@ -159,12 +225,12 @@ hr {
     text-align: center;
 }
 
-/* top images */
 .contact-images {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .contact-images img {
@@ -175,7 +241,6 @@ hr {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* row for email + button */
 .email-row {
     display: flex;
     justify-content: center;
@@ -191,11 +256,10 @@ hr {
     font-size: 1.1rem;
 }
 
-/* button */
 .email-row button {
     padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
-    background-color: #555783;
+    background-color: #7e1b3c; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -203,18 +267,16 @@ hr {
 }
 
 .email-row button:hover {
-    background-color: #3a58a1;
+    background-color: #c43766; 
 }
 
-/* general contact info */
 .contact-info p {
     font-size: 1.1rem;
     margin: 0.6rem 0;
 }
 
-/* links */
 .contact-info a {
-    color: #4b6cb7;
+    color: #7e1b3c; 
     text-decoration: none;
 }
 
@@ -225,4 +287,90 @@ hr {
 .contact-links a {
     margin: 0 0.8rem;
     font-weight: bold;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Medium screens (tablets, <800px) */
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .project {
+        width: 80%;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .intro-text {
+        padding: 0 1rem;
+    }
+}
+
+/* Small screens (phones, <500px) */
+@media (max-width: 500px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .headshot {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .contact-images img {
+        width: 100%;
+    }
+
+    .contact-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .email-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+/* On narrow screens, stack intro vertically with image on top */
+@media (max-width: 800px) {
+  .intro {
+    flex-direction: column-reverse; /* image ABOVE text */
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .intro-left {
+    order: -1; /* ensures image block comes first */
+  }
+
+  .intro-text {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .headshot {
+    width: 130px;
+    height: 130px;
+  }
 }

@@ -6,18 +6,34 @@
     <img src="{{ url_for('static', filename='headshot.jpg') }}" alt="Headshot" class="headshot">
     <div class="intro-text">
         <h1 style="font-size: 2rem;"> Hi, my name is Michelle Lee. Welcome to my portfolio! </h1>
-        <p>I'm currently a rising senior at Columbia University majoring in Computer Science. 
-            I love building personal projects (such as this website!) and learning more about AI and UX design. 
-            As a Divison I student-athlete, I also help run the Instagram page for @columbia.vertical.jumps.
-            In my free time I like to read, learn art/photography, and pole vault!</p>
-        <p>Feel free to check out my page and/or contact me!</p>
-        <div class="headshot-links">
-            <a href="https://github.com/michellesynlee" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/michellesynlee" target="_blank">LinkedIn</a> 
-            <a href="https://www.youtube.com/@MichelleSiyanLee" target="_blank">YouTube</a> 
-            <a href="https://drive.google.com/file/d/1FQmgemEqYUVR7u4ymrWuqAo341AVp-Sg/view?usp=sharing" target="_blank">CV</a>
+        <p>
+          I'm currently a rising senior at Columbia University majoring in Computer Science. 
+          I love building personal projects (such as this website!) and learning more about AI and UX design. 
+          As a Division I student-athlete, I also help run the Instagram page for 
+          <a href="https://www.instagram.com/columbia.vertical.jumps" 
+            target="_blank" 
+            class="insta-link">
+            @columbia.vertical.jumps
+          </a>.
+        </p>
 
+        <p>
+          Feel free to check out my page and/or <a href="{{ url_for('contact') }}" class="contact-link">contact me</a>!
+        </p>
+
+        <div class="headshot-links">
+          <a href="https://github.com/michellesynlee" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/michellesynlee" target="_blank">LinkedIn</a> 
+          <a href="https://www.youtube.com/@MichelleSiyanLee" target="_blank">YouTube</a> 
+
+          <!-- Direct downloadable PDF link -->
+          <a href="{{ url_for('static', filename='2025_Michelle_Lee_Resume.pdf') }}" 
+            download 
+            class="cv-link">
+            Download CV
+          </a>
         </div>
+        
     </div>
 </div>
 
