@@ -8,11 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
 <body>
     <nav>
         <ul>
-            <li><a href="{{ url_for('home') }}">About Me</a></li>
-            <li><a href="{{ url_for('projects') }}">Completed Projects</a></li>
+            <li><a href="{{ url_for('home') }}">About</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
             <li><a href="{{ url_for('photography') }}">Photography</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>

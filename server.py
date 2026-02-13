@@ -18,5 +18,9 @@ def photography():
 def contact():
     return render_template('contact.html')
 
+@app.route('/dataviz')
+def dataviz():
+    return render_template('dataviz.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

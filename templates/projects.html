@@ -2,34 +2,101 @@
 {% block title %}Projects{% endblock %}
 {% block content %}
 <div class="completed-projects-section">
-    <h2 style="text-align: center;">My Completed Projects</h2>
+    <h1 style="text-align: center;">My Projects</h1>
+    <p style="text-align: center;">
+        Some projects I've worked on both in and out of class. (Links may take a minute to load since some are hosted on free platforms)
+    </p>
     <div class="project-gallery">
+
         <div class="project">
-            <img src="{{ url_for('static', filename='llmmaze.png') }}" alt="llm project">
-            <p class="caption">
-                3DUI & AR Group Project: Using voice commands and LLMs in Oculus Quest 2 headset to support navigating from start to exit in a VR maze in Unity</p>
-                <a href="https://docs.google.com/presentation/d/1bCrMDPvRn_Z1CsftvZMcsmSgtWHIZ2YxB4b-kjzt_BE/edit?usp=sharing" target="_blank">Click to see final project/demo</a> <br>
+            <img src="{{ url_for('static', filename='UROP.png') }}" 
+                alt="llm project"
+                class="clickable-image"
+                onclick="openModal(this)">
+
+            <div class="project-text">
+                I led end-to-end development of a health resource hub serving Harlem and Washington Heights, translating public health needs into accessible, user-centered web experiences.
+                I worked directly with clinicians and community stakeholders to synthesize feedback into iterative design and content updates, created interactive Figma prototypes,
+                and implemented responsive frontends using <strong>HTML/CSS/JavaScript</strong>. <br><br>             
+                <a href="https://urop-website-1.onrender.com" target="_blank">
+                    View website
+                </a>
+            </div>
         </div>
-                <div class="project">
-            <img src="{{ url_for('static', filename='h4d-figma.png') }}" alt="maze project">
-            <p class="caption">
-                I helped with designing and implementing this <strong>Figma prototype</strong> for my current course 
+        
+        <div class="project">
+            <img src="{{ url_for('static', filename='pixplot.png') }}" 
+                alt="llm project"
+                class="clickable-image"
+                onclick="openModal(this)">
+
+            <div class="project-text">
+                I designed a <strong>UMAP-based visualization</strong> of 500+ archival images from 
+                <a href="https://eldersproject.incite.columbia.edu/" target="_blank">
+                    The Elders Project
+                </a>
+                using PixPlot, 
+                enabling researchers to explore visual and thematic relationships across thousands of digitized photographs. 
+                These findings have helped raise new questions that are currently being explored in follow-up research.
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="{{ url_for('static', filename='topics.png') }}" 
+                alt="llm project"
+                class="clickable-image"
+                onclick="openModal(this)">
+
+            <div class="project-text">
+                This 'digital exhibition' is a fun passion project I am working on in my free time to hone my web design skills and learn more about how 
+                to make interactive web experiences. I pole vaulted throughout high school and college, and wanted to 
+                create a fun interactive website using <strong>HTML/CSS/Javascript</strong> to help others learn more about it. <br><br>
+                <a href="https://digitalpolevault.onrender.com" target="_blank">
+                    View project
+                </a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="{{ url_for('static', filename='h4d-figma.png') }}" 
+                alt="llm project"
+                class="clickable-image"
+                onclick="openModal(this)">
+
+            <div class="project-text">
+                I helped with designing and implementing this <strong>Figma prototype</strong> for the class
                 <em>Hacking 4 Defense</em>, where my team is building a web application to streamline the driver licensing 
-                process for members of the <strong>National Guard</strong>.
-                <br> 
+                process for members of the National guard.
+                <br> <br>
                 From there, we built an MVP Military License Assistant to address key bottlenecks and readiness challenges,
                 and submitted a policy proposal picked up by the Adjutant General and presented work that drew 
                 interest from the National Guard Bureau’s J84 Innovation Branch.
-            </p>
-        </div>
-        <div class="project">
-            <img src="{{ url_for('static', filename='maze.png') }}" alt="maze project">
-            <p class="caption">
-                3DUI & AR Individual Project: Used Unity to build a mobile tilt-based ball-rolling game with levels, collectibles, victory screens, etc.</p>
-            <a href="https://www.youtube.com/shorts/qQVhkKSQeQs" target="_blank">Click to watch demo</a> <br>
+            </div>
         </div>
 
+        <div class="project">
+            <img src="{{ url_for('static', filename='llmmaze.png') }}" 
+                alt="llm project"
+                class="clickable-image"
+                onclick="openModal(this)">
+
+            <div class="project-text">
+                <p class="caption">
+                    3DUI & AR Group Project: Using voice commands and LLMs in Oculus Quest 2 headset 
+                    to support navigating from start to exit in a VR maze in Unity
+                </p>
+                <a href="https://docs.google.com/presentation/d/1bCrMDPvRn_Z1CsftvZMcsmSgtWHIZ2YxB4b-kjzt_BE/edit?usp=sharing" target="_blank">
+                    View final project/demo
+                </a>
+            </div>
+        </div>
         <!-- Add more projects as needed  -->
     </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
 </div>
 {% endblock %}

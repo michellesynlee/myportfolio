@@ -8,13 +8,24 @@
         <h1 style="font-size: 2rem;"> Hi, my name is Michelle Lee. Welcome to my portfolio! </h1>
         <p>
           I'm currently a senior at Columbia University majoring in Computer Science. 
-          I love building personal projects (such as this website!) and learning more about Web Development and User Experience. 
+          I love building data visuzalizations for fun and learning more about Web Development and Data Journalism. 
+          I'm currently a Digital Humanities Intern at 
+          <a href="https://incite.columbia.edu/" target="_blank">Incite Institute</a>, 
+          where I work on data integration and presentation 
+          for a few flagship projects including the 
+          <a href="https://obamaoralhistory.columbia.edu/" target="_blank">
+            Obama Presidency Oral History Project</a>.
+          I also help create digital works for 
+          <a href="https://www.theblueandwhite.org/" target="_blank">
+            The Blue and White</a>, 
+          a magazine at Columbia. 
+          <br><br>
           As a Division I student-athlete, I also help run the Instagram page for 
           <a href="https://www.instagram.com/columbia.vertical.jumps" 
-            target="_blank" 
-            class="insta-link">
+             target="_blank" 
+             class="insta-link">
             @columbia.vertical.jumps
-          </a>. I hope to one day work in helping bridge the gap between technology and other industries in a meaningful way!
+          </a>.
         </p>
 
         <p>
@@ -22,9 +33,9 @@
         </p>
 
         <div class="headshot-links">
-          <a href="https://github.com/michellesynlee" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/michellesynlee" target="_blank">LinkedIn</a> 
-          <a href="https://www.youtube.com/@MichelleSiyanLee" target="_blank">YouTube</a> 
+          <a href="https://github.com/michellesynlee" target="_blank"><strong>GitHub</strong></a>
+          <a href="https://linkedin.com/in/michellesynlee" target="_blank"><strong>LinkedIn</strong></a> 
+          <a href="https://www.youtube.com/@MichelleSiyanLee" target="_blank"><strong>YouTube</strong></a> 
 
           <!-- Direct downloadable PDF link -->
           <a href="{{ url_for('static', filename='2026resume.pdf') }}" 
@@ -33,85 +44,15 @@
             Download CV
           </a>
         </div>
-        
+    </div>
+
+    <div class="quick links">
+      <div></div>
+      
     </div>
 </div>
 
 <hr>
-<div class="projects-section">
-  <div class="section-header">
-    <h2 style="font-size: 3rem;">Current Projects</h2>
-    <p>(Check out my completed projects in the projects page linked above!)</p>
-  </div>
 
-  <!-- First project: video -->
-  <div class="project-single" 
-       style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
-       
-    <div style="position: relative; width: 100%; max-width: 400px; aspect-ratio: 16/9;">
-      <iframe 
-        width="100%" 
-        height="100%" 
-        src="https://www.youtube.com/embed/m6DFv8Ctq4Y"
-        title="Project Progress Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        style="border-radius: 8px;">
-      </iframe>
-    </div>
-
-    <p class="caption" style="max-width: 500px; font-size: 1.1rem;">
-      I am currently developing and iterating on a <strong>Health resource website for the Harlem and Washington Heights Community 
-      using HTML/Javascript/CSS.</strong>
-      Under collaboration with Dr. Hiral Shah and Divya Palanisamy, this website serves not only as a medical/event resource hub, 
-      but also as a platform for community, faith, and health education. This demo video shows our current progress!
-    </p>
-  </div>
-
-    <!-- Second project: image -->
-  <div class="project-single" 
-     style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
-     
-    <div style="position: relative; width: 100%; max-width: 400px; aspect-ratio: 16/9;">
-      <iframe
-        width="100%" 
-        height="100%" 
-        src="https://www.youtube.com/embed/8k0ivdEmKK8"
-        title="Project Progress Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        style="border-radius: 8px;">
-      </iframe>
-    </div>
-
-    <p class="caption" style="max-width: 500px; font-size: 1.1rem;">
-        My second project is a digital exhibition: a fun exploration of pole vault! I was inspired to create this in order to 
-        practice my creative web development skills and combine my interests in sports and history. Using HTML/CSS/JavaScript, I built this website to showcase
-        various aspects of pole vault history, including notable athletes, equipment evolution, and significant events.
-    </p>
-  </div>
-
-      <!-- Second project: image -->
-  <div class="project-single" 
-     style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
-     
-    <div style="position: relative; width: 100%; max-width: 400px;">
-        <img 
-        src="{{ url_for('static', filename='pixplot.png') }}" 
-        alt="Screenshot of UMAP"
-        style="width: 100%; border-radius: 8px; object-fit: cover;">
-    </div>
-
-    <p class="caption" style="max-width: 500px; font-size: 1.1rem;">
-        My third project is a <strong>UMAP visualization of images from the Elder's Project</strong> using PixPlot for
-        my work study Digital Humanities position at Incite Institute. I use Python to organize and prepare the images
-        and metadata, and am currently working on (1) adding customizations to the visualization and (2) exploring
-        interactive ways to display this information.
-    </p>
-    </div>
-
-</div>
 
 {% endblock %}
