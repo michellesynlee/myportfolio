@@ -77,7 +77,7 @@ button:hover {
 }
 
 .intro-text {
-    max-width: 1300px;   /* make text stretch wider */
+    max-width: 1000px;   /* make text stretch wider */
     flex: 1;
     text-align: left;     /* keep text aligned left on large screens */
     cursor: default; 
