@@ -68,7 +68,8 @@ button:hover {
     flex-wrap: wrap;
     text-align: center;  /* ensures even alignment when stacked */
     font-size: 1.2rem;
-    width: 60%;
+    width: 90%;
+    max-width: 960px;
 }
 
 .intro-left {
@@ -92,25 +93,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* narrow screens */
-@media (max-width: 800px) {
-  .intro {
-      flex-direction: column-reverse; /* image ABOVE text */
-      text-align: center;
-      gap: 1.5rem;
-  }
-
-  .intro-text {
-      max-width: 90%;
-      text-align: center; /* center text when stacked */
-      padding: 0 1rem;
-  }
-
-  .headshot {
-      width: 130px;
-      height: 130px;
-  }
-}
 
 .headshot {
     width: 200px;
@@ -124,6 +106,7 @@ button:hover {
 .headshot-links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 hr {
@@ -199,8 +182,10 @@ hr {
 }
 
 .project img {
-  width: 300px;           /* adjust as needed */
+  width: 300px;
+  max-width: 100%;
   height: auto;
+  flex-shrink: 0;
 }
 
 .project-text {
@@ -371,7 +356,19 @@ hr {
     }
 
     .project {
-        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        gap: 1.5rem;
+    }
+
+    .project img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .project-gallery {
+        margin-top: 40px;
     }
 
     .photo-gallery {
@@ -404,6 +401,16 @@ hr {
         height: 120px;
     }
 
+    .intro {
+        margin: 1.5rem auto;
+        font-size: 1rem;
+    }
+
+    .headshot-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+
     .project {
         width: 100%;
     }
@@ -423,25 +430,3 @@ hr {
     }
 }
 
-/* On narrow screens, stack intro vertically with image on top */
-@media (max-width: 800px) {
-  .intro {
-    flex-direction: column-reverse; /* image ABOVE text */
-    text-align: center;
-    gap: 1.5rem;
-  }
-
-  .intro-left {
-    order: -1; /* ensures image block comes first */
-  }
-
-  .intro-text {
-    padding: 0 1rem;
-    max-width: 100%;
-  }
-
-  .headshot {
-    width: 130px;
-    height: 130px;
-  }
-}
