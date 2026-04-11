@@ -161,7 +161,7 @@ hr {
 }
 
 .completed-projects-section {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;   /* centers the section */
   padding: 40px 20px;
 }
@@ -182,7 +182,7 @@ hr {
 }
 
 .project img {
-  width: 300px;
+  width: 420px;
   max-width: 100%;
   height: auto;
   flex-shrink: 0;
