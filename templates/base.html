@@ -15,6 +15,11 @@ function openModal(img) {
   const modalImg = document.getElementById("modalImage");
   modal.style.display = "block";
   modalImg.src = img.src;
+  if (img.src.endsWith('.gif')) {
+    modalImg.classList.add('modal-content-gif');
+  } else {
+    modalImg.classList.remove('modal-content-gif');
+  }
 }
 
 function closeModal() {

@@ -235,6 +235,12 @@ hr {
   border-radius: 8px;
 }
 
+.modal-content-gif {
+  width: 90%;
+  max-width: 90%;
+  max-height: 90vh;
+}
+
 /* Close button */
 .close {
   position: absolute;
